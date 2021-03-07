@@ -5,7 +5,7 @@
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
 [![Build Status](https://travis-ci.org/yegor256/obk.svg)](https://travis-ci.org/yegor256/obk)
-[![Build status](https://ci.appveyor.com/api/projects/status/pexc3cg49m75c0r6?svg=true)](https://ci.appveyor.com/project/yegor256/obk)
+[![Build status](https://ci.appveyor.com/api/projects/status/fb01sojss2q1gwot?svg=true)](https://ci.appveyor.com/project/yegor256/obk)
 [![Gem Version](https://badge.fury.io/rb/obk.svg)](http://badge.fury.io/rb/obk)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e1be4e43e125fdc1e454/maintainability)](https://codeclimate.com/github/yegor256/obk/maintainability)
 [![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/github/yegor256/obk/master/frames)
