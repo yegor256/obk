@@ -7,7 +7,7 @@
 [![Build Status](https://travis-ci.org/yegor256/obk.svg)](https://travis-ci.org/yegor256/obk)
 [![Build status](https://ci.appveyor.com/api/projects/status/pexc3cg49m75c0r6?svg=true)](https://ci.appveyor.com/project/yegor256/obk)
 [![Gem Version](https://badge.fury.io/rb/obk.svg)](http://badge.fury.io/rb/obk)
-[![Maintainability](https://api.codeclimate.com/v1/badges/51b007d0eb24ceeeca94/maintainability)](https://codeclimate.com/github/yegor256/obk/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e1be4e43e125fdc1e454/maintainability)](https://codeclimate.com/github/yegor256/obk/maintainability)
 [![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/github/yegor256/obk/master/frames)
 
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/obk)](https://hitsofcode.com/view/github/yegor256/obk)
