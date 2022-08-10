@@ -8,6 +8,9 @@ install: |
 release:
   script: |-
     bundle exec rake clean test rubocop copyright
+    sed -i "s/0\.0\.0/${tag}/g" obk.gemspec
+    git add obk.gemspec
+    git commit -m "version set to ${tag}"
     gem build obk.gemspec
     chmod 0600 ../rubygems.yml
     gem push *.gem --config-file ../rubygems.yml
