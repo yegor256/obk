@@ -4,12 +4,10 @@
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/obk)](http://www.rultor.com/p/yegor256/obk)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
-[![Build Status](https://travis-ci.org/yegor256/obk.svg)](https://travis-ci.org/yegor256/obk)
-[![Build status](https://ci.appveyor.com/api/projects/status/fb01sojss2q1gwot?svg=true)](https://ci.appveyor.com/project/yegor256/obk)
+[![rake](https://github.com/yegor256/obk/actions/workflows/rake.yml/badge.svg)](https://github.com/yegor256/obk/actions/workflows/rake.yml)
 [![Gem Version](https://badge.fury.io/rb/obk.svg)](http://badge.fury.io/rb/obk)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e1be4e43e125fdc1e454/maintainability)](https://codeclimate.com/github/yegor256/obk/maintainability)
 [![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/github/yegor256/obk/master/frames)
-
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/obk)](https://hitsofcode.com/view/github/yegor256/obk)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/obk/blob/master/LICENSE.txt)
 
