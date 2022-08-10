@@ -5,6 +5,7 @@
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
 
 [![rake](https://github.com/yegor256/obk/actions/workflows/rake.yml/badge.svg)](https://github.com/yegor256/obk/actions/workflows/rake.yml)
+[![Test Coverage](https://img.shields.io/codecov/c/github/obk/cobench.svg)](https://codecov.io/github/yegor256/obk?branch=master)
 [![Gem Version](https://badge.fury.io/rb/obk.svg)](http://badge.fury.io/rb/obk)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e1be4e43e125fdc1e454/maintainability)](https://codeclimate.com/github/yegor256/obk/maintainability)
 [![Yard Docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://rubydoc.info/github/yegor256/obk/master/frames)
