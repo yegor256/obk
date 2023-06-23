@@ -37,10 +37,5 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split($RS)
   s.rdoc_options = ['--charset=UTF-8']
   s.extra_rdoc_files = ['README.md']
-  s.add_development_dependency 'minitest', '5.16.2'
-  s.add_development_dependency 'rake', '13.0.6'
-  s.add_development_dependency 'rdoc', '6.4.0'
-  s.add_development_dependency 'rubocop', '1.34.1'
-  s.add_development_dependency 'rubocop-rspec', '2.12.1'
   s.metadata['rubygems_mfa_required'] = 'true'
 end

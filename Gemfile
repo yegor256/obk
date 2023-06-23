@@ -21,5 +21,10 @@
 # SOFTWARE.
 
 source 'https://rubygems.org'
-ruby '~>2.3'
 gemspec
+
+gem 'minitest', '5.16.2', require: false
+gem 'rake', '13.0.6', require: false
+gem 'rdoc', '6.4.0', require: false
+gem 'rubocop', '1.34.1', require: false
+gem 'rubocop-rspec', '2.12.1', require: false
