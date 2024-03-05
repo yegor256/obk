@@ -40,12 +40,21 @@ class Obk
   def method_missing(*args)
     left = @pause - (Time.now - @latest)
     sleep left if left.positive?
-    result = if block_given?
-      @origin.__send__(*args) do |*a|
-        yield(*a)
+    mtd = args.shift
+    result = if @origin.respond_to?(mtd)
+      params = @origin.method(mtd).parameters
+      reqs = params.count { |p| p[0] == :req }
+      if params.any? { |p| p[0] == :key } && args.size > reqs
+        @origin.__send__(mtd, *args[0...-1], **args.last) do |*a|
+          yield(*a) if block_given?
+        end
+      else
+        @origin.__send__(mtd, *args) do |*a|
+          yield(*a) if block_given?
+        end
       end
     else
-      @origin.__send__(*args)
+      super
     end
     @latest = Time.now
     result
