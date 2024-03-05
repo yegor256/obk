@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# (The MIT License)
+#
 # Copyright (c) 2021-2024 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,12 +22,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-source 'https://rubygems.org'
-gemspec
+$stdout.sync = true
 
-gem 'minitest', '5.22.2', require: false
-gem 'rake', '13.1.0', require: false
-gem 'rdoc', '6.6.2', require: false
-gem 'rubocop', '1.61.0', require: false
-gem 'rubocop-rspec', '2.27.1', require: false
-gem 'simplecov', '0.22.0', require: false
+require 'simplecov'
+SimpleCov.start
+
+require 'minitest/autorun'
