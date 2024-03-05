@@ -1,6 +1,6 @@
 # Throttle Ruby Method Calls
 
-![logo](/logo.svg =64x64)
+![logo](/logo.svg)
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/obk)](http://www.rultor.com/p/yegor256/obk)
