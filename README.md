@@ -1,4 +1,6 @@
-<img src="/logo.svg" width="64px" height="64px"/>
+# Throttle Ruby Method Calls
+
+![logo](/logo.svg =64x64)
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/obk)](http://www.rultor.com/p/yegor256/obk)
@@ -36,7 +38,8 @@ Keep in mind that `Obk` is _not_ thread-safe.
 
 Read [these guidelines](https://www.yegor256.com/2014/04/15/github-guidelines.html).
 Make sure you build is green before you contribute
-your pull request. You will need to have [Ruby](https://www.ruby-lang.org/en/) 2.3+ and
+your pull request. You will need to have
+[Ruby](https://www.ruby-lang.org/en/) 2.3+ and
 [Bundler](https://bundler.io/) installed. Then:
 
 ```bash
