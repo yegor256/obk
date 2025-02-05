@@ -3,7 +3,6 @@ AllCops:
   TargetRubyVersion: 2.3
   NewCops: enable
   SuggestExtensions: false
-
 Layout/EndOfLine:
   EnforcedStyle: lf
 Style/OptionalBooleanParameter:
@@ -24,3 +23,7 @@ Metrics/PerceivedComplexity:
   Max: 15
 Metrics/CyclomaticComplexity:
   Max: 15
+required:
+  - rubocop-rake
+  - rubocop-minitest
+  - rubocop-performance
