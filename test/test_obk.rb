@@ -22,7 +22,7 @@ class ObkTest < Minitest::Test
     assert_equal(42, obj.read(42))
     assert_equal(42, obj.read(42))
     stop = Time.now
-    assert(stop - start > 0.1)
+    assert_operator(stop - start, :>, 0.1)
   end
 
   def test_works_with_optional_arguments
