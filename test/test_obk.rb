@@ -5,6 +5,7 @@
 
 require 'minitest/autorun'
 require 'json'
+require_relative '../test/test__helper'
 require_relative '../lib/obk'
 
 # Obk test.
