@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2021-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2021-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 # Obk is a decorator that adds delays between object method calls.
@@ -9,7 +9,7 @@
 # {README}[https://github.com/yegor256/obk/blob/master/README.md] file.
 #
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2021-2025 Yegor Bugayenko
+# Copyright:: Copyright (c) 2021-2026 Yegor Bugayenko
 # License:: MIT
 class Obk
   def initialize(origin, pause: 1000)
