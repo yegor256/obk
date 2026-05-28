@@ -20,9 +20,9 @@ class Obk
 
   def method_missing(*args)
     left = @pause - (Time.now - @latest)
-    sleep left if left.positive?
+    sleep(left) if left.positive?
     mtd = args.shift
-    result = if @origin.respond_to?(mtd)
+    if @origin.respond_to?(mtd)
       params = @origin.method(mtd).parameters
       reqs = params.count { |p| p[0] == :req }
       if params.any? { |p| p[0] == :key } && args.size > reqs
@@ -36,9 +36,7 @@ class Obk
       end
     else
       super
-    end
-    @latest = Time.now
-    result
+    end.tap { @latest = Time.now }
   end
 
   def respond_to?(method, include_private = false)
