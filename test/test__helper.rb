@@ -6,7 +6,6 @@
 $stdout.sync = true
 
 require 'simplecov'
-SimpleCov.external_at_exit = true
 SimpleCov.start
 
 require 'simplecov-cobertura'
