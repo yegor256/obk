@@ -12,6 +12,8 @@
 # Copyright:: Copyright (c) 2021-2026 Yegor Bugayenko
 # License:: MIT
 class Obk
+  KEYWORDS = %i[key keyreq keyrest].freeze
+
   def initialize(origin, pause: 1000)
     @origin = origin
     @pause = pause / 1000.0
@@ -25,7 +27,7 @@ class Obk
     if @origin.respond_to?(mtd)
       params = @origin.method(mtd).parameters
       reqs = params.count { |p| p[0] == :req }
-      if params.any? { |p| p[0] == :key } && args.size > reqs
+      if params.any? { |p| KEYWORDS.include?(p[0]) } && args.size > reqs
         @origin.__send__(mtd, *args[0...-1], **args.last) do |*a|
           yield(*a) if block_given?
         end
