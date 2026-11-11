@@ -18,7 +18,7 @@ class Obk
     @latest = Time.now
   end
 
-  def method_missing(*args)
+  def method_missing(*args, &block)
     left = @pause - (Time.now - @latest)
     sleep(left) if left.positive?
     mtd = args.shift
@@ -26,13 +26,9 @@ class Obk
       params = @origin.method(mtd).parameters
       reqs = params.count { |p| p[0] == :req }
       if params.any? { |p| p[0] == :key } && args.size > reqs
-        @origin.__send__(mtd, *args[0...-1], **args.last) do |*a|
-          yield(*a) if block_given?
-        end
+        @origin.__send__(mtd, *args[0...-1], **args.last, &block)
       else
-        @origin.__send__(mtd, *args) do |*a|
-          yield(*a) if block_given?
-        end
+        @origin.__send__(mtd, *args, &block)
       end
     else
       super
