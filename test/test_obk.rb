@@ -45,4 +45,36 @@ class ObkTest < Minitest::Test
     assert_equal(15, synced.foo(7, 8))
     assert_equal(43, synced.foo(1))
   end
+
+  def test_passes_no_block_with_positional_arguments
+    plain = Object.new
+    def plain.foo(_first)
+      block_given? ? 'has block' : 'no block'
+    end
+    assert_equal('no block', Obk.new(plain, pause: 10).foo(1))
+  end
+
+  def test_passes_no_block_with_keyword_arguments
+    plain = Object.new
+    def plain.foo(_first, ext: 'a')
+      block_given? ? "has #{ext}" : "no #{ext}"
+    end
+    assert_equal('no x', Obk.new(plain, pause: 10).foo(1, ext: 'x'))
+  end
+
+  def test_passes_block_with_positional_arguments
+    plain = Object.new
+    def plain.foo(first)
+      block_given? ? yield(first) : 'no block'
+    end
+    assert_equal(8, Obk.new(plain, pause: 10).foo(7) { |x| x + 1 })
+  end
+
+  def test_passes_block_with_keyword_arguments
+    plain = Object.new
+    def plain.foo(first, ext: 1)
+      block_given? ? yield(first + ext) : 'no block'
+    end
+    assert_equal(9, Obk.new(plain, pause: 10).foo(7, ext: 2) { |x| x })
+  end
 end
