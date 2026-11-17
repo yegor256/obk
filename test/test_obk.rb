@@ -61,4 +61,16 @@ class ObkTest < Minitest::Test
     end
     assert_equal(9, Obk.new(plain, pause: 10).foo(4, second: 5))
   end
+
+  def test_rejects_unsupported_method_object
+    assert_raises(NameError) { Obk.new(Object.new, pause: 0).method(:nonexistent) }
+  end
+
+  def test_returns_supported_method_object
+    plain = Object.new
+    def plain.foo
+      42
+    end
+    assert_equal(42, Obk.new(plain, pause: 0).method(:foo).call)
+  end
 end
