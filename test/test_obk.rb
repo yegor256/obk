@@ -46,6 +46,22 @@ class ObkTest < Minitest::Test
     assert_equal(43, synced.foo(1))
   end
 
+  def test_works_with_required_keyword
+    plain = Object.new
+    def plain.foo(first, second:)
+      first + second
+    end
+    assert_equal(9, Obk.new(plain, pause: 10).foo(4, second: 5))
+  end
+
+  def test_works_with_keyword_rest
+    plain = Object.new
+    def plain.foo(first, **opts)
+      first + opts[:second]
+    end
+    assert_equal(9, Obk.new(plain, pause: 10).foo(4, second: 5))
+  end
+
   def test_passes_no_block_with_positional_arguments
     plain = Object.new
     def plain.foo(_first)
